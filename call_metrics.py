@@ -31,8 +31,8 @@ def manager_frequency(df):
     return counter
 
 
-no_answer = no_answer_frequency(case_study)
-print(no_answer)
+# no_answer = no_answer_frequency(case_study)
+# print(no_answer)
 
-answer = answer_frequency(case_study)
-print(answer)
+# answer = answer_frequency(case_study)
+# print(answer)
