@@ -1,11 +1,11 @@
 import plotly.graph_objects as go
 import pandas as pd
-from ai_analysis import ai_seating_metrics, ai_seating_metrics_manager, ai_seating_metrics_owner
+from data_analysis.ai_analysis import ai_seating_metrics, ai_seating_metrics_manager, ai_seating_metrics_owner
 
-case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
 
-def plot_ai_seating_pie_chart(df):
-    no_interest_count, engaged_count, deferred_count = ai_seating_metrics(df)
+def plot_ai_seating_pie_chart():
+    case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
+    no_interest_count, engaged_count, deferred_count = ai_seating_metrics(case_study)
 
     labels = ["No Interest", "Engaged", "Deferred"]
     values = [no_interest_count, engaged_count, deferred_count]
@@ -13,11 +13,13 @@ def plot_ai_seating_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
+    return fig
+    # fig.show()
 
-    fig.show()
+def plot_ai_seating_owner_pie_chart():
+    case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
 
-def plot_ai_seating_owner_pie_chart(df):
-    no_interest_count, engaged_count, deferred_count = ai_seating_metrics_owner(df)
+    no_interest_count, engaged_count, deferred_count = ai_seating_metrics_owner(case_study)
 
     labels = ["Owner No Interest", "Owner Engaged", "Owner Deferred"]
     values = [no_interest_count, engaged_count, deferred_count]
@@ -28,8 +30,9 @@ def plot_ai_seating_owner_pie_chart(df):
     return fig
     # fig.show()
 
-def plot_ai_seating_manager_pie_chart(df):
-    no_interest_count, engaged_count, deferred_count = ai_seating_metrics_manager(df)
+def plot_ai_seating_manager_pie_chart():
+    case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
+    no_interest_count, engaged_count, deferred_count = ai_seating_metrics_manager(case_study)
 
     labels = ["Manager No Interest", "Manager Engaged", "Manager Deferred"]
     values = [no_interest_count, engaged_count, deferred_count]
