@@ -24,11 +24,13 @@ def weighed_effects_persons():
     
     # Use .loc to modify a slice of the DataFrame
     new_df = df[(df["Pitch"] == "AI") | (df["Pitch"] == "Operator") | (df["Pitch"] == "Smooth")].copy()
+    # print(new_df)
 
     weights = {
         'Engaged': 2,
         'Deferred to Other Stakeholder': 1,
-        'No Interest': 0
+        'No Interest': 0,
+        'No interest': 0
     }
 
     person_weight = {
@@ -37,14 +39,17 @@ def weighed_effects_persons():
     }
 
     # Set the 'Disposition Score' and 'Person Weight' with .loc to avoid SettingWithCopyWarning
+
     new_df.loc[:, 'Disposition Score'] = new_df['Disposition'].map(weights)
     new_df.loc[:, 'Person Weight'] = new_df['Person'].map(person_weight)
+
 
     # Calculate weighted disposition score
     new_df.loc[:, 'Weighted Disposition Score'] = new_df['Disposition Score'] * new_df['Person Weight']
 
     # Group by Pitch and calculate the mean weighted disposition score
     grouped = new_df.groupby('Pitch')['Weighted Disposition Score'].mean().reset_index()
+
 
     # Sort by weighted score
     grouped = grouped.sort_values(by='Weighted Disposition Score', ascending=False)
