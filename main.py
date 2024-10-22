@@ -1,5 +1,5 @@
 import dash
-from app_layout import create_layout
+from layout.app_layout import create_layout
 import dash_mantine_components as dmc
 
 app = dash.Dash(__name__)

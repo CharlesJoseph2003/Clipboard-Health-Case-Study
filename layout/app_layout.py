@@ -1,6 +1,6 @@
 from dash import html
 import dash_mantine_components as dmc
-from page_layouts import create_layout_ai, create_layout_operator, create_layout_smooth, create_layout_comparison
+from layout.page_layouts import create_layout_ai, create_layout_operator, create_layout_smooth, create_layout_comparison
 
 def create_layout():
     app_layout = html.Div(children=[
