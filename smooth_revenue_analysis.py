@@ -36,18 +36,18 @@ def smooth_metrics_manager(df):
 
 
 
-no_interest_count, engaged_count, deferred_count = smooth_metrics(case_study)
-print('General Metrics')
-print(f"No Interest: {no_interest_count}")
-print(f"Engaged: {engaged_count}")
-print(f"Deferred to Other: {deferred_count}")
+# no_interest_count, engaged_count, deferred_count = smooth_metrics(case_study)
+# print('General Metrics')
+# print(f"No Interest: {no_interest_count}")
+# print(f"Engaged: {engaged_count}")
+# print(f"Deferred to Other: {deferred_count}")
 
 
-no_interest_count, engaged_count, deferred_count = smooth_metrics_owner(case_study)
-print('Owner')
-print(f"No Interest: {no_interest_count}")
-print(f"Engaged: {engaged_count}")
-print(f"Deferred to Other: {deferred_count}")
+# no_interest_count, engaged_count, deferred_count = smooth_metrics_owner(case_study)
+# print('Owner')
+# print(f"No Interest: {no_interest_count}")
+# print(f"Engaged: {engaged_count}")
+# print(f"Deferred to Other: {deferred_count}")
 
 # print('Manager')
 # no_interest_count, engaged_count, deferred_count = smooth_metrics_manager(case_study)

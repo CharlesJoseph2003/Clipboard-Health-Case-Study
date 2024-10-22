@@ -13,8 +13,8 @@ def plot_smooth_revenue_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 def plot_smooth_revenue_owner_pie_chart(df):
     no_interest_count, engaged_count, deferred_count = smooth_metrics_owner(df)
@@ -25,8 +25,8 @@ def plot_smooth_revenue_owner_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 
 def plot_smooth_revenue_manager_pie_chart(df):
@@ -38,8 +38,8 @@ def plot_smooth_revenue_manager_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 smooth_revenue_graph = plot_smooth_revenue_pie_chart(case_study)
 smooth_revenue_owner_graph = plot_smooth_revenue_owner_pie_chart(case_study)

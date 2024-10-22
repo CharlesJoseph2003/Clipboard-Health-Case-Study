@@ -17,8 +17,8 @@ def plot_call_connect_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 
 def plot_owner_manager_pickup_pie_chart(df):
@@ -31,8 +31,8 @@ def plot_owner_manager_pickup_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 plot_call_connect_pie_chart(case_study)
 plot_owner_manager_pickup_pie_chart(case_study)

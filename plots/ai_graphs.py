@@ -25,8 +25,8 @@ def plot_ai_seating_owner_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 def plot_ai_seating_manager_pie_chart(df):
     no_interest_count, engaged_count, deferred_count = ai_seating_metrics_manager(df)
@@ -37,8 +37,8 @@ def plot_ai_seating_manager_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 
 

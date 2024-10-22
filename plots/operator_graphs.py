@@ -14,8 +14,8 @@ def plot_operator_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 
 def plot_operator_owner_pie_chart(df):
@@ -27,8 +27,8 @@ def plot_operator_owner_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 
 def plot_operator_manager_pie_chart(df):
@@ -40,8 +40,8 @@ def plot_operator_manager_pie_chart(df):
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
     
-
-    fig.show()
+    return fig
+    # fig.show()
 
 operator_graph = plot_operator_pie_chart(case_study)
 operator_owner_graph = plot_operator_owner_pie_chart(case_study)
