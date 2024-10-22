@@ -13,9 +13,17 @@ def plot_smooth_revenue_pie_chart():
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
+    fig.update_layout(
+    title={
+        'text': "Smooth Revenue Overall Disposition Distribution",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
     
     return fig
-    # fig.show()
 
 def plot_smooth_revenue_owner_pie_chart():
     case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
@@ -26,10 +34,18 @@ def plot_smooth_revenue_owner_pie_chart():
     values = [no_interest_count, engaged_count, deferred_count]
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
-                                 insidetextorientation='radial')])
+                                 insidetextorientation='radial', direction='clockwise', rotation=90)])
+    fig.update_layout(
+    title={
+        'text': "Smooth Revenue Disposition Distribution - Owner",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
     
     return fig
-    # fig.show()
 
 
 def plot_smooth_revenue_manager_pie_chart():
@@ -42,11 +58,14 @@ def plot_smooth_revenue_manager_pie_chart():
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
-    
-    # return fig
+    fig.update_layout(
+    title={
+        'text': "Smooth Revenue Disposition Distribution - Manager",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
     return fig
-
-# smooth_revenue_graph = plot_smooth_revenue_pie_chart(case_study)
-# smooth_revenue_owner_graph = plot_smooth_revenue_owner_pie_chart(case_study)
-# smooth_revenue_manager_graph = plot_smooth_revenue_manager_pie_chart(case_study)
 

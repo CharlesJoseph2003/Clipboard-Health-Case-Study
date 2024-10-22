@@ -16,8 +16,16 @@ def plot_compare_engagement_pie_chart():
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
+    fig.update_layout(
+    title={
+        'text': "Pitch Engagement Distribution",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
     return fig
-    # fig.show()
 
 
 def plot_compare_pitches_bar_chart():
@@ -31,7 +39,17 @@ def plot_compare_pitches_bar_chart():
         go.Bar(name='Engaged', x=labels, y=[engaged_count_ai, engaged_count_operator, engaged_count_smooth]),
         go.Bar(name='Deferred to Other Stakeholder', x=labels, y=[deferred_ai, deferred_operator, deferred_smooth]),
         go.Bar(name='No Interest', x=labels, y=[no_interest_ai, no_interest_operator, no_interest_smooth])])
-    fig.update_layout(barmode='stack')
+    fig.update_layout(
+    barmode='stack',
+    title={
+        'text': "Pitch Disposition Distribution",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
+
     return fig
 
 def plot_compare_pitches_owner_bar_chart():
@@ -46,7 +64,16 @@ def plot_compare_pitches_owner_bar_chart():
         go.Bar(name='Engaged', x=labels, y=[engaged_count_ai, engaged_count_operator, engaged_count_smooth]),
         go.Bar(name='Deferred to Other Stakeholder', x=labels, y=[deferred_ai, deferred_operator, deferred_smooth]),
         go.Bar(name='No Interest', x=labels, y=[no_interest_ai, no_interest_operator, no_interest_smooth])])
-    fig.update_layout(barmode='stack')
+    fig.update_layout(
+    barmode='stack',
+    title={
+        'text': "Pitch Disposition Distribution - Owner",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
     return fig
 
 def plot_compare_pitches_manager_bar_chart():
@@ -61,10 +88,15 @@ def plot_compare_pitches_manager_bar_chart():
         go.Bar(name='Engaged', x=labels, y=[engaged_count_ai, engaged_count_operator, engaged_count_smooth]),
         go.Bar(name='Deferred to Other Stakeholder', x=labels, y=[deferred_ai, deferred_operator, deferred_smooth]),
         go.Bar(name='No Interest', x=labels, y=[no_interest_ai, no_interest_operator, no_interest_smooth])])
-    fig.update_layout(barmode='stack')
+    fig.update_layout(
+    barmode='stack',
+    title={
+        'text': "Pitch Disposition Distribution - Manager",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
     return fig
 
-# engagement = plot_compare_engagement_pie_chart(case_study)
-# compare_pitches = plot_compare_pitches_pie_chart(case_study)
-# compare_pitches_owner = plot_compare_pitches_owner_pie_chart(case_study)
-# compare_pitches_manager = plot_compare_pitches_manager_pie_chart(case_study)

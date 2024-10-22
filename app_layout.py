@@ -10,18 +10,19 @@ def create_layout():
             [
                 dmc.TabsList(
                     [
+                        dmc.Tab('Comparison', value='comparison'),
                         dmc.Tab('AI Seating', value='ai_seating'),  # Corrected value to match the TabsPanel value
                         dmc.Tab('Operator', value='operator'),
                         dmc.Tab('Smooth Revenue', value='smooth'),
-                        dmc.Tab('Comparison', value='comparison')
+
                     ],
                     position='center',
                     grow=True
                 ),
+                dmc.TabsPanel(create_layout_comparison(), value='comparison'),
                 dmc.TabsPanel(create_layout_ai(), value='ai_seating'),
                 dmc.TabsPanel(create_layout_operator(), value='operator'),
                 dmc.TabsPanel(create_layout_smooth(), value='smooth'),
-                dmc.TabsPanel(create_layout_comparison(), value='comparison'),
             ],
             color='blue',
             orientation='horizontal',

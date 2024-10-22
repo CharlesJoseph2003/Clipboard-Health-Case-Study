@@ -12,9 +12,18 @@ def plot_ai_seating_pie_chart():
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
+    fig.update_layout(
+        title={
+            'text': "AI Seating Overall Disposition Distribution",
+            'y': 0.9,
+            'x': 0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'
+        }
+    )
     
     return fig
-    # fig.show()
+
 
 def plot_ai_seating_owner_pie_chart():
     case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
@@ -26,9 +35,19 @@ def plot_ai_seating_owner_pie_chart():
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
+    fig.update_layout(
+    title={
+        'text': "AI Seating Disposition Distribution - Owner",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
+
     
     return fig
-    # fig.show()
+
 
 def plot_ai_seating_manager_pie_chart():
     case_study = pd.read_csv("Soft Skillet_ October Data Live - Activity Data vOct.csv")
@@ -39,12 +58,16 @@ def plot_ai_seating_manager_pie_chart():
 
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent',
                                  insidetextorientation='radial')])
+    fig.update_layout(
+    title={
+        'text': "AI Seating Disposition Distribution - Manager",
+        'y': 0.9,
+        'x': 0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'
+    }
+)
+    
+
     
     return fig
-    # fig.show()
-
-
-
-# ai_seating_graph = plot_ai_seating_pie_chart(case_study)
-# ai_seating_owner_graph = plot_ai_seating_owner_pie_chart(case_study)
-# ai_seating_manager_graph = plot_ai_seating_manager_pie_chart(case_study)

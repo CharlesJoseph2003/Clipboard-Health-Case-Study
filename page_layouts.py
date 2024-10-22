@@ -59,10 +59,10 @@ def create_layout_comparison():
             cols = 2,
             spacing= 'sm',
             children=[
+                dcc.Graph(figure=plot_compare_engagement_pie_chart()),
                 dcc.Graph(figure=plot_compare_pitches_bar_chart()),
                 dcc.Graph(figure=plot_compare_pitches_owner_bar_chart()),
                 dcc.Graph(figure=plot_compare_pitches_manager_bar_chart()),
-                dcc.Graph(figure=plot_compare_engagement_pie_chart())
             ]
         )
 

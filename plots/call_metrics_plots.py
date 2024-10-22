@@ -15,7 +15,7 @@ def plot_call_connect_pie_chart():
                                  insidetextorientation='radial')])
     
     return fig
-    # fig.show()
+
 
 
 def plot_owner_manager_pickup_pie_chart():
@@ -30,7 +30,3 @@ def plot_owner_manager_pickup_pie_chart():
                                  insidetextorientation='radial')])
     
     return fig
-    # fig.show()
-
-# plot_call_connect_pie_chart(case_study)
-# plot_owner_manager_pickup_pie_chart(case_study)
